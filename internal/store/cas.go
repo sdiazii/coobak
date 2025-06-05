@@ -21,3 +21,9 @@ func (c *CAS) Store(hash [32]byte, data []byte) error {
     os.MkdirAll(filepath.Dir(path), 0755)
     return os.WriteFile(path, data, 0644)
 }
+
+func (c *CAS) Retrieve(hash [32]byte) ([]byte, error) {
+    hexHash := hex.EncodeToString(hash[:])
+    path := filepath.Join(c.BasePath, "blocks", hexHash)
+    return os.ReadFile(path)
+}
