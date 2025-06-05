@@ -116,11 +116,6 @@ All backups are stored in a hidden `.coobak/` directory:
 
 ---
 
-## 📜 License
-
-MIT License. Feel free to adapt and extend this system for your needs.
-
----
 
 ## 👤 Author
 
